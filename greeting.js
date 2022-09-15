@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greetings");
+    greeting = document.querySelector(".js-greetings"),
+    signoutBtn = document.querySelector(".js-reset-btn");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -37,6 +38,11 @@ function loadName() {
         paintGreeting(currentUser);
     }
 }
+
+signoutBtn.addEventListener('click',() => {
+    localStorage.removeItem(USER_LS);
+    alert('로그아웃!');
+})
 
 function init() {
     loadName();

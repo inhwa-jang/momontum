@@ -11,6 +11,7 @@ input {
     outline: none;
     padding-left: 12px;
     background-color: rgb(233, 233, 233);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 ul {
@@ -47,6 +48,7 @@ ul li {
     margin-bottom: 5px;
     text-align: left;
     color:rgb(13, 35, 63);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 li {
@@ -77,19 +79,19 @@ h1, h4{
 }
 
 h1 {
-    font-size: 52px;
+    font-size: 48px;
     text-align: center;
     margin: 10px 0;
     border-bottom: dotted 2px #a1a1a1;
-    color:rgb(14, 82, 146);
+    color:rgb(54, 121, 237);
 }
 
 h4 {
     display: block;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     margin: 0;
-    color: rgb(44, 99, 187);
+    color: rgb(235, 107, 146);
 }
 
 h4 i {
@@ -99,22 +101,23 @@ h4 i {
 
 .clock-name {
     position: relative;
-    top: 150px;
+    top: 170px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px;
+    width: 300px;
     height: 180px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .center {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -133,13 +136,40 @@ h4 i {
 span img {
     width: 30px;
     height: 30px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 50%;
     padding: 4px 4px;
     position: fixed;
     top: 10px;
     border :dotted 2px #a1a1a1;
 }
+
+/* 리셋 버튼 */
+.js-reset-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  align-items: center;
+  background: (255, 255, 255, 0.7);
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* display: inline-flex; */
+  font-size: 24px;
+  height: 56px;
+  /* justify-content: center; */
+  /* line-height: 24px; */
+  /* overflow-wrap: break-word; */
+  padding: 24px;
+  width: 50px;
+  height: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
 
 /* 배경 */
 .bgImage {
@@ -170,4 +200,40 @@ span img {
     z-index: -1;
     animation: fadeIn 3s linear;
     opacity: 0.8;
+}
+
+/* 반응형 */
+@media screen and (min-width: 768px){
+    span img {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+
+    .clock-name {
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 52px;
+        text-align: center;
+        margin: 10px 0;
+        border-bottom: dotted 4px #a1a1a1;
+        color:rgb(235, 107, 146);
+    }
+
+    h4 {
+        display: block;
+        font-size: 32px;
+        text-align: center;
+        margin: 0;
+        color: rgb(54, 121, 237);
+    }
 }
