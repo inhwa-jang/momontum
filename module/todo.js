@@ -4,7 +4,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoList = document.querySelector(".js-toDoList");
 
 // 투두리스트의 로컬스토리지를 뜻함
-const TODOS_LS = 'toDos';
+export const TODOS_LS = 'toDos';
 
 // 여러개의 투두 목록들이 모여서 저장되도록 하기 위해 빈 배열로 설정
 let toDos = [];
@@ -73,3 +73,7 @@ function init() {
 }
 
 init();
+
+export default{
+    TODOS_LS
+}

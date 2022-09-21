@@ -1,10 +1,12 @@
+import {TODOS_LS} from "./todo.js";
+
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector(".js-greetings"),
     signoutBtn = document.querySelector(".js-reset-btn");
 
-const USER_LS = "currentUser",
-    SHOWING_CN = "showing";
+const USER_LS = "currentUser";
+const SHOWING_CN = "showing";
 
 function saveName(text) {
     localStorage.setItem(USER_LS, text);
@@ -40,8 +42,10 @@ function loadName() {
 }
 
 signoutBtn.addEventListener('click',() => {
-    localStorage.removeItem(USER_LS);
     alert('로그아웃!');
+    localStorage.removeItem(USER_LS);
+    localStorage.removeItem(TODOS_LS);
+    window.location.reload();
 })
 
 function init() {
@@ -49,3 +53,4 @@ function init() {
 }
 
 init();
+
